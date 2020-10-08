@@ -1,0 +1,24 @@
+{
+  "name": "@andrewmcodes/prettier-config",
+  "version": "0.0.0-development",
+  "private": false,
+  "description": "@andrewmcodes Prettier config",
+  "keywords": [
+    "prettier",
+    "prettier-config"
+  ],
+  "repository": "https://github.com/andrewmcodes/prettier-config.git",
+  "license": "MIT",
+  "author": "Andrew Mason <andrewmcodes@protonmail.com>",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "postpublish": "npm publish --ignore-scripts --@github:registry='https://npm.pkg.github.com'",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "semantic-release": "^17.1.2"
+  }
+}
