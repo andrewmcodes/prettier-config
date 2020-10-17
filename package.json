@@ -1,6 +1,9 @@
 {
   "name": "@andrewmcodes/prettier-config",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "private": false,
   "description": "@andrewmcodes Prettier config",
   "keywords": [
@@ -15,7 +18,7 @@
     "index.js"
   ],
   "scripts": {
-    "postpublish": "npm publish --ignore-scripts --@github:registry='https://npm.pkg.github.com'",
+    "postpublish": "npm publish",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
