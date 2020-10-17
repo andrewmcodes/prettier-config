@@ -20,5 +20,10 @@
   },
   "devDependencies": {
     "semantic-release": "^17.2.1"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   }
 }
