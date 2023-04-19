@@ -12,7 +12,7 @@
   ],
   "repository": "https://github.com/andrewmcodes/prettier-config.git",
   "license": "MIT",
-  "author": "Andrew Mason <andrewmcodes@protonmail.com>",
+  "author": "Andrew Mason <support@andrewm.codes>",
   "main": "index.js",
   "files": [
     "index.js"
