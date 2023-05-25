@@ -19,7 +19,7 @@ jobs:
       - uses: andrewmcodes/actions/setup-node@main
 
   test:
-    name: Tests
+    name: Test
     runs-on: ubuntu-latest
     needs:
       - setup_node
