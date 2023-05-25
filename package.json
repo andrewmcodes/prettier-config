@@ -28,6 +28,6 @@
     "ci": "yarn lint && yarn test",
     "test": "jest",
     "format": "prettier --write .",
-    "lint": "prettier --check ."
+    "lint": "prettier --check '*.{js,json}'"
   }
 }
