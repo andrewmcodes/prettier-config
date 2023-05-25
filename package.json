@@ -2,7 +2,7 @@
   "private": false,
   "name": "@andrewmcodes/prettier-config",
   "version": "1.0.0",
-  "description": "@andrewmcodes Prettier config",
+  "description": "Personal Prettier config for @andrewmcodes",
   "license": "MIT",
   "author": "Andrew Mason <support@andrewm.codes>",
   "repository": "https://github.com/andrewmcodes/prettier-config.git",
@@ -17,9 +17,6 @@
     "config",
     "andrewmcodes"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "devDependencies": {
     "jest": "^29.5.0",
     "prettier": "^2.8.8"
