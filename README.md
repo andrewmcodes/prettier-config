@@ -1,11 +1,9 @@
 # @andrewmcodes/prettier-config
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
-
 ![npm](https://img.shields.io/npm/v/@andrewmcodes/prettier-config)
-![License](https://img.shields.io/npm/l/@andrewmcodes/prettier-config)
 [![CI](https://github.com/andrewmcodes/prettier-config/actions/workflows/ci.yml/badge.svg)](https://github.com/andrewmcodes/prettier-config/actions/workflows/ci.yml)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 This is a shareable [Prettier](https://prettier.io/) configuration, which includes a set of preferred styling rules that can be easily extended.
 
