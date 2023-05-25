@@ -1,10 +1,3 @@
-module.exports = {
-  arrowParens: "avoid",
-  bracketSpacing: true,
-  printWidth: 120,
-  semi: false,
-  singleQuote: false,
-  tabWidth: 2,
-  trailingComma: "none",
-  useTabs: false,
-};
+const config = require("./prettier.config.js");
+
+module.exports = config;

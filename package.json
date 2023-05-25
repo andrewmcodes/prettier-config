@@ -1,20 +1,31 @@
 {
+  "private": false,
   "name": "@andrewmcodes/prettier-config",
   "version": "1.0.0",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "private": false,
-  "description": "@andrewmcodes Prettier config",
-  "keywords": [
-    "prettier",
-    "prettier-config"
-  ],
-  "repository": "https://github.com/andrewmcodes/prettier-config.git",
+  "description": "Personal Prettier config for @andrewmcodes",
   "license": "MIT",
-  "author": "Andrew Mason <support@andrewm.codes>",
+  "author": "Andrew Mason (https://andrewm.codes)",
+  "homepage": "https://github.com/andrewmcodes/prettier-config#readme",
+  "repository": "https://github.com/andrewmcodes/prettier-config.git",
+  "bugs": "https://github.com/andrewmcodes/prettier-config/issues",
   "main": "index.js",
   "files": [
-    "index.js"
+    "prettier.config.js"
+  ],
+  "scripts": {
+    "ci": "yarn lint && yarn test",
+    "format": "prettier --write .",
+    "lint": "prettier --check '*.{js,json}'",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8"
+  },
+  "keywords": [
+    "andrewmcodes",
+    "config",
+    "prettier",
+    "prettier-config"
   ]
 }
