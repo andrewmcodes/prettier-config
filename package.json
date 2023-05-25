@@ -27,5 +27,8 @@
     "config",
     "prettier",
     "prettier-config"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
