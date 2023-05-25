@@ -1,7 +1,5 @@
 # @andrewmcodes/prettier-config
 
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-
 My shareable prettier config that I am tired of hauling around.
 
 ## Install

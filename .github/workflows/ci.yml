@@ -1,0 +1,61 @@
+name: CI
+
+on: [pull_request]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  setup_node:
+    name: Setup Node
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: andrewmcodes/actions/setup-node@main
+
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    needs:
+      - setup_node
+    steps:
+      - uses: actions/checkout@v3
+      - uses: andrewmcodes/actions/setup-node@main
+      - run: yarn test
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    needs:
+      - setup_node
+    steps:
+      - uses: actions/checkout@v3
+      - uses: andrewmcodes/actions/setup-node@main
+      - run: yarn lint
+
+  release:
+    if: github.event_name == 'push' && github.ref_name == 'main'
+    name: Release
+    runs-on: ubuntu-latest
+    needs:
+      - test
+      - lint
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          package-name: "@andrewmcodes/prettier-config"
+      - uses: actions/checkout@v3
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: andrewmcodes/actions/setup-node@main
+        with:
+          registry-url: 'https://registry.npmjs.org'
+        if: ${{ steps.release.outputs.release_created }}
+      - run: yarn ci
+        if: ${{ steps.release.outputs.release_created }}
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: ${{ steps.release.outputs.release_created }}
