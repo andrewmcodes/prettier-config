@@ -1,51 +1,56 @@
-# @andrewmcodes/prettier-config
+# @andrewmcodes Config Monorepo
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-![npm](https://img.shields.io/npm/v/@andrewmcodes/prettier-config)
-[![CI](https://github.com/andrewmcodes/prettier-config/actions/workflows/ci.yml/badge.svg)](https://github.com/andrewmcodes/prettier-config/actions/workflows/ci.yml)
+[![Test](https://github.com/andrewmcodes/prettier-config/actions/workflows/test.yml/badge.svg)](https://github.com/andrewmcodes/prettier-config/actions/workflows/test.yml)
+[![Lint](https://github.com/andrewmcodes/prettier-config/actions/workflows/lint.yml/badge.svg)](https://github.com/andrewmcodes/prettier-config/actions/workflows/lint.yml)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
-This is a shareable [Prettier](https://prettier.io/) configuration, which includes a set of preferred styling rules that can be easily extended.
+This monorepo contains shareable configurations for various code quality tools.
 
-## Installation
+## Packages
+
+- [@andrewmcodes/prettier-config](./packages/prettier-config) - Prettier configuration
+- [@andrewmcodes/commitlint-config](./packages/commitlint-config) - Commitlint configuration
+- [@andrewmcodes/eslint-config](./packages/eslint-config) - ESLint configuration
+- [@andrewmcodes/stylelint-config](./packages/stylelint-config) - Stylelint configuration
+
+## Development
+
+This monorepo uses [pnpm](https://pnpm.io/) for package management.
+
+### Installation
 
 ```shell
-# npm
-npm install --save-dev @andrewmcodes/prettier-config
-# yarn
-yarn add -D @andrewmcodes/prettier-config
+pnpm install
 ```
 
-## Usage
+### Testing
 
-You can use this a few different ways, but the recommended approach is to add it to your `package.json`:
+```shell
+# Run tests for all packages
+pnpm test
 
-```json
-"prettier": "@andrewmcodes/prettier-config"
+# Run tests for a specific package
+pnpm --filter @andrewmcodes/prettier-config test
 ```
 
-If you don’t want to use package.json, you can use any of the supported extensions to export a string, e.g. .prettierrc.json:
+### Linting
 
-```json
-"@andrewmcodes/prettier-config"
-```
+```shell
+# Run linters for all packages
+pnpm lint
 
-If you need to extend the configuration, you can use the .js extension and export an object:
-
-```javascript
-module.exports = {
-  ...require("@andrewmcodes/prettier-config"),
-  semi: false,
-};
+# Format all files
+pnpm format
 ```
 
 ## Contributing
 
-I'd love your help refining this package. Please don't hesitate to send a pull request.
+I'd love your help refining these packages. Please don't hesitate to send a pull request.
 
 ### Code Style
 
-Run `yarn format` before committing to ensure your changes comply with our coding style.
+Run `pnpm format` before committing to ensure your changes comply with our coding style.
 
 ### Commit Messages
 
@@ -53,4 +58,4 @@ This project uses [Conventional Commits](https://www.conventionalcommits.org/en/
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The packages are available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

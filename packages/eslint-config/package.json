@@ -1,0 +1,33 @@
+{
+  "private": false,
+  "name": "@andrewmcodes/eslint-config",
+  "version": "1.0.0",
+  "description": "Personal ESLint config for @andrewmcodes",
+  "license": "MIT",
+  "author": "Andrew Mason (https://andrewm.codes)",
+  "homepage": "https://github.com/andrewmcodes/prettier-config#readme",
+  "repository": "https://github.com/andrewmcodes/prettier-config.git",
+  "bugs": "https://github.com/andrewmcodes/prettier-config/issues",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0"
+  },
+  "keywords": [
+    "andrewmcodes",
+    "config",
+    "eslint",
+    "eslint-config"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
