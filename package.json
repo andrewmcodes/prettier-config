@@ -1,34 +1,26 @@
 {
-  "private": false,
-  "name": "@andrewmcodes/prettier-config",
-  "version": "2.0.0",
-  "description": "Personal Prettier config for @andrewmcodes",
+  "private": true,
+  "name": "@andrewmcodes/config-monorepo",
+  "version": "1.0.0",
+  "description": "Monorepo for @andrewmcodes shared configs",
   "license": "MIT",
   "author": "Andrew Mason (https://andrewm.codes)",
   "homepage": "https://github.com/andrewmcodes/prettier-config#readme",
   "repository": "https://github.com/andrewmcodes/prettier-config.git",
   "bugs": "https://github.com/andrewmcodes/prettier-config/issues",
-  "main": "index.js",
-  "files": [
-    "prettier.config.js"
-  ],
   "scripts": {
-    "ci": "yarn lint && yarn test",
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "lint": "pnpm -r run lint",
     "format": "prettier --write .",
-    "lint": "prettier --check '*.{js,json}'",
-    "test": "jest"
+    "clean": "pnpm -r run clean && rm -rf node_modules"
   },
   "devDependencies": {
-    "jest": "^29.5.0",
     "prettier": "^2.8.8"
   },
-  "keywords": [
-    "andrewmcodes",
-    "config",
-    "prettier",
-    "prettier-config"
-  ],
-  "publishConfig": {
-    "access": "public"
-  }
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@10.18.0"
 }
