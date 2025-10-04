@@ -1,5 +1,5 @@
-const stylelint = require("stylelint");
-const config = require("./index");
+import stylelint from "stylelint";
+import config from "./index";
 
 async function runTests() {
   // Test 1: Config structure
@@ -16,7 +16,8 @@ async function runTests() {
   console.log("✓ at-rule-no-unknown rule is configured");
 
   // Test 2: Verify Tailwind at-rules are ignored
-  const tailwindAtRules = config.rules["at-rule-no-unknown"][1].ignoreAtRules;
+  const atRuleConfig = config.rules["at-rule-no-unknown"];
+  const tailwindAtRules = (Array.isArray(atRuleConfig) && atRuleConfig[1]?.ignoreAtRules) || [];
   const expectedAtRules = ["tailwind", "apply", "variants", "responsive", "screen"];
 
   for (const rule of expectedAtRules) {

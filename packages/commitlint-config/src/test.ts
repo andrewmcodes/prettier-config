@@ -1,6 +1,6 @@
-const load = require("@commitlint/load").default;
-const lint = require("@commitlint/lint").default;
-const config = require("./index");
+import load from "@commitlint/load";
+import lint from "@commitlint/lint";
+import config from "./index";
 
 async function runTests() {
   // Test 1: Config structure

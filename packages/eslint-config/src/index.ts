@@ -1,4 +1,6 @@
-module.exports = {
+import type { Linter } from "eslint";
+
+const config: Linter.Config = {
   env: {
     browser: true,
     es2021: true,
@@ -14,3 +16,5 @@ module.exports = {
     "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
   },
 };
+
+export default config;

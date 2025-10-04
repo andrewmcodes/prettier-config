@@ -8,12 +8,16 @@
   "homepage": "https://github.com/andrewmcodes/prettier-config#readme",
   "repository": "https://github.com/andrewmcodes/prettier-config.git",
   "bugs": "https://github.com/andrewmcodes/prettier-config/issues",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "index.js"
+    "dist"
   ],
   "scripts": {
-    "test": "node test.js"
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run clean && pnpm run build",
+    "test": "tsx src/test.ts"
   },
   "dependencies": {
     "@commitlint/config-conventional": "^18.4.3"
@@ -21,7 +25,11 @@
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/lint": "^18.4.3",
-    "@commitlint/load": "^18.4.3"
+    "@commitlint/load": "^18.4.3",
+    "@commitlint/types": "^18.4.3",
+    "@types/node": "^20.10.6",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
   },
   "keywords": [
     "andrewmcodes",

@@ -1,5 +1,5 @@
-const { ESLint } = require("eslint");
-const config = require("./index");
+import { ESLint } from "eslint";
+import config from "./index";
 
 async function runTests() {
   // Test 1: Config structure
@@ -23,7 +23,7 @@ async function runTests() {
   console.log("✓ Browser and ES2021 environments are enabled");
 
   // Test 3: Verify custom rules
-  if (!config.rules["no-console"] || config.rules["no-console"][0] !== "warn") {
+  if (!config.rules || !config.rules["no-console"] || config.rules["no-console"][0] !== "warn") {
     console.error("❌ no-console rule should be set to warn");
     process.exit(1);
   }

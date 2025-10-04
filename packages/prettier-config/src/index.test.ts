@@ -1,5 +1,5 @@
-const prettier = require("prettier");
-const config = require("./index");
+import prettier from "prettier";
+import config from "./index";
 
 describe("Prettier Configuration", () => {
   test("config object has printWidth property set to 120", () => {
