@@ -15,7 +15,7 @@ jobs:
     name: Setup Node
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - uses: andrewmcodes/actions/setup-node@main
 
   test:
@@ -24,7 +24,7 @@ jobs:
     needs:
       - setup_node
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - uses: andrewmcodes/actions/setup-node@main
       - run: yarn test
 
@@ -34,7 +34,7 @@ jobs:
     needs:
       - setup_node
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - uses: andrewmcodes/actions/setup-node@main
       - run: yarn lint
 
@@ -46,12 +46,12 @@ jobs:
       - test
       - lint
     steps:
-      - uses: google-github-actions/release-please-action@v3
+      - uses: googleapis/release-please-action@v4
         id: release
         with:
-          release-type: node
-          package-name: "@andrewmcodes/prettier-config"
-      - uses: actions/checkout@v3
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+      - uses: actions/checkout@v6
         if: ${{ steps.release.outputs.release_created }}
       - uses: andrewmcodes/actions/setup-node@main
         with:
