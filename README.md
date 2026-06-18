@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **This repository has moved.** `@andrewmcodes/prettier-config` is now developed and published from the [`andrewmcodes/js-configs`](https://github.com/andrewmcodes/js-configs) monorepo. This repository is archived and read-only — please open issues and pull requests in [js-configs](https://github.com/andrewmcodes/js-configs). The npm package name is unchanged.
+
 # @andrewmcodes/prettier-config
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
